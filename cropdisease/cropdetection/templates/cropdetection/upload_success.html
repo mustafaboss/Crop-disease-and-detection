@@ -1,0 +1,10 @@
+{% extends 'cropdetection/base.html' %}
+
+{% block content %}
+<div class="mt-5">
+    <h2>Prediction Success!</h2>
+    <p>Predicted Disease Type: {{ disease_type }}</p>
+    <p>Accuracy: {{ confidence }}%</p>
+    <img src="{{ processed_image }}" alt="Processed Image" class="img-fluid">
+</div>
+{% endblock %}

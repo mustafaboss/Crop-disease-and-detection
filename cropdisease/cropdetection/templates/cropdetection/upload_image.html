@@ -1,0 +1,12 @@
+{% extends 'cropdetection/base.html' %}
+
+{% block content %}
+<div class="mt-5">
+    <h2>Upload Image</h2>
+    <form method="post" action="{% url 'upload_image' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit" class="btn btn-success">Predict Disease</button>
+    </form>
+</div>
+{% endblock %}
